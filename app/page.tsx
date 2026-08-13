@@ -1,6 +1,6 @@
-import { TopAppBar } from "@/components/nav";
-import { ShapeField } from "@/components/shapes";
-import { Icon } from "@/components/icons";
+import { TopAppBar } from "@/app/components/nav";
+import { ShapeField } from "@/app/components/shapes";
+import { Icon } from "@/app/components/icons";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
           </h1>
 
           <p className="m-0 text-[clamp(16px,2.2vw,20px)] font-medium tracking-[0.1px] text-on-surface-variant">
-            a Hack Club YSWS - get a Google Pixel 10a!
+            a Hack Club YSWS, get a Pixel Phone!!!
           </p>
 
           <div className="mt-3 flex flex-wrap items-center justify-center gap-3">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { TopAppBar } from "@/components/nav";
-import { ShapeField } from "@/components/shapes";
-import { Icon } from "@/components/icons";
+import { TopAppBar } from "@/app/components/nav";
+import { ShapeField } from "@/app/components/shapes";
+import { Icon } from "@/app/components/icons";
 
 export const metadata: Metadata = {
   title: "Sign in",
