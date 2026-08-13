@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-primary: #ec3750;
+  --color-on-primary: #fff;
+  --color-primary-container: #ffdad9;
+  --color-on-primary-container: #410008;
+  --color-secondary: #338eda;
+  --color-on-secondary: #fff;
+  --color-secondary-container: #d6e6ff;
+  --color-on-secondary-container: #001c39;
+  --color-tertiary: #ffae34;
+  --color-on-tertiary: #452b00;
+  --color-tertiary-container: #ffddaf;
+  --color-on-tertiary-container: #2c1800;
+  --color-surface: #fffbff;
+  --color-surface-dim: #e5d7d7;
+  --color-on-surface: #201a19;
+  --color-on-surface-variant: #534341;
+  --color-outline: #857371;
+  --color-outline-variant: #d8c2bf;
+  --color-surface-container: #fbeeed;
+  --color-surface-container-high: #f5e1df;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-display: "Product Sans", ui-sans-serif, system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-extra-large: 28px;
+  --radius-full: 999px;
+
+  --animate-float-a: float-a 16s ease-in-out infinite;
+  --animate-float-b: float-b 20s ease-in-out infinite;
+  --animate-float-c: float-c 14s ease-in-out infinite;
+  --animate-float-d: float-c 18s ease-in-out infinite;
+  --animate-float-a-slow: float-a 24s ease-in-out infinite reverse;
+
+  @keyframes float-a {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: translate(14px, -18px) rotate(6deg);
+    }
+  }
+
+  @keyframes float-b {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(14px, -18px) rotate(6deg);
+    }
+  }
+
+  @keyframes float-c {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-10px, 10px) scale(1.06);
+    }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-display);
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+  line-height: 1;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape-a,
+  .shape-b,
+  .shape-c,
+  .shape-d,
+  .shape-e {
+    animation: none;
+  }
 }
